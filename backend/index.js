@@ -18,9 +18,7 @@ connectDB();
 app.use(cors());
 app.use(express.json()); // to accept json data
 
-// app.get("/", (req, res) => {
-//   res.send("API Running!");
-// });
+
 
 app.use('/api/user', userRoutes);
 app.use('/api/chat', chatRoutes);
@@ -50,6 +48,9 @@ const __dirname1 = path.resolve();
 app.use(notFound);
 app.use(errorHandler);
 
+// app.get("/", (req, res) => {
+//   res.send("API Running!");
+// });
 
 const server = app.listen(
     process.env.PORT || 8080,
