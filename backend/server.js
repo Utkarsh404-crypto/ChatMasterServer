@@ -52,8 +52,8 @@ app.use(errorHandler);
 
 
 const server = app.listen(
-    process.env.PORT || 5000,
-    console.log(`Server running on PORT 5000...`.yellow.bold)
+    process.env.PORT || 8080,
+    console.log(`Server running on PORT 8080...`.yellow.bold)
 );
 
 const io = require('socket.io')(server, {
